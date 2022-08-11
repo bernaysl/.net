@@ -1,0 +1,27 @@
+﻿CREATE TABLE [dbo].[tbl_Employees] (
+    [Empl_ID]          INT           NOT NULL,
+    [Empl_FName]       NVARCHAR (50) NULL,
+    [Empl_LName]       NVARCHAR (50) NULL,
+    [Empl_Name]        AS            (([Empl_FName] + ' ') + [Empl_LName]),
+    [Empl_BDate]       DATE          NULL,
+    [Dept_ID]          INT           NULL,
+    [Empl_Start_Date ] DATE          NULL,
+    [Empl_Left_Date ]  NCHAR (10)    NULL,
+    [Empl_Address ]    NVARCHAR (50) NULL,
+    [Empl_City ]       NVARCHAR (50) NULL,
+    [Empl_Province ]   NVARCHAR (50) NULL,
+    [Empl_Phone ]      NCHAR (10)    NULL,
+    [Empl_Cell ]       NCHAR (10)    NULL,
+    [Empl_Email ]      NVARCHAR (50) NULL,
+    [Gender_ID ]       NCHAR (10)    NULL,
+    [Title_ID ]        NTEXT         NULL,
+    [Empl_Photo ]      IMAGE         NULL,
+    [Empl_CV ]         IMAGE         NULL,
+    [Empl_CV_File ]    IMAGE         NULL,
+    [Empl_CV_Web ]     NVARCHAR (50) NULL,
+    [Entered_By ]      NVARCHAR (50) NULL,
+    [Entered_Date ]    DATE          NULL,
+    [Is_Empl_Active ]  NCHAR (10)    NULL,
+    PRIMARY KEY CLUSTERED ([Empl_ID] ASC)
+);
+
